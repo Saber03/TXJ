@@ -1,0 +1,35 @@
+<div class="contractDetailed">
+    <div class="userTrade-title">
+        <h3 >投资合同</h3>
+        <button class="btn btn-default" ui-sref ="backStage.userDetailed({id:vm.id})">返回</button>
+    </div>
+    <div class="contractContent">
+        <div style="text-align: center">聚金融投资合同</div>
+        <div>委托人：<span>{{vm.list.actualName}}</span></div>
+        <div>身份证账号：<span>{{vm.list.cardID}}</span></div>
+        <div>受托人：<span>聚金融</span></div>
+        <div>住所：<span>{{}}</span></div>
+        <div>鉴于委托人为在聚金融平台运营实名的注册用户，现处于聚金融平台的理财计划，为优化委托人用户体验，委托人就理财相关标的、 资金划转、退出等相关事项向受托人做出如下授权：</div>
+        <div>一、授权范围</div>
+        <div>（一）代委托人在聚金融平台上点击确认立即购买、投资资金和《富友综合支付服务协议》等业务流程中的全部协议。</div>
+        <div>（二）代委托人进行划转出借资金，收回借款本息、收取债权转让款项等业务流程中涉及到全部资金管理。</div>
+        <div>二、授权出借的账户</div>
+        <div>（一）授权出借的账户</div>
+        <div>聚金融平台账号：<span>{{vm.list.phoneNum}}</span></div>
+        <div>（二）授权出借的金额：人民币（大写）<span>{{vm.list.investmentMoney | money}}</span>，（小写）¥<span>{{vm.list.investmentMoney}}</span>元。</div>
+        <div>三、授权期限</div>
+        <div>本授权期限自委托人与受托人间签署《聚金融投资合同》之日起至完全退出该理财计划（或紧急退出）之日止。</div>
+        <div>  四、本委托书经委托人在聚金融平台以线上点击确认的方式签署。</div>
+        <div class="contractContent-bottom">
+            <div></div>
+            <div>
+                <img src="img/u934.png" alt="">
+                <div>委托人：<span>{{vm.list.actualName}}</span></div>
+                <div>受托人：<span>聚金融</span></div>
+                <div><span>{{vm.list.createAt}}</span></div>
+            </div>
+        </div>
+ 
+        
+    </div>
+</div>

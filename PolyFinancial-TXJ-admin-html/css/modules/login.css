@@ -1,0 +1,13 @@
+.login {
+  padding: .2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px  solid pink; }
+
+.login-btn {
+  display: flex;
+  justify-content: center; }
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,90 @@
+<div class="row user">
+    <form>
+        <div class="col-xs-4">
+            <span>用户ID：</span><input class="form-control" type="text" ng-model ="vm.userId">
+        </div>
+        <div class="col-xs-4">
+            <span>真实姓名：</span><input class="form-control" type="text" ng-model ="vm.userName">
+        </div>
+        <div class="col-xs-4">
+            <span></span>
+            <button class="btn btn-danger" ng-click = "vm.reset()">重置</button>
+            <span></span>
+        </div>
+        <div class="col-xs-4">
+            <span>手机号：</span><input class="form-control" type="text" ng-model = "vm.phone" >
+        </div>
+        <div class="col-xs-4">
+            <span>状态：</span>
+            <select class="form-control" ng-model = "vm.status" >
+                <option value="0">正常</option>
+                <option value="1">冻结</option>
+            </select>
+        </div>
+        <div class="col-xs-4">
+            <span></span>
+            <button class="btn btn-success" ng-click = "vm.userSearch()">搜索</button>
+            <span></span>
+        </div>
+    </form>
+
+    <h2 class="col-xs-12">用户列表</h2>
+    <div class="table-responsive col-xs-12">
+        <table id="tb" class="table table-striped table-hover table-responsive table-condensed table-bordered user-list-table">
+            <tr>
+                <td><strong>序号</strong></td>
+                <td><strong>手机号</strong></td>
+                <td><strong>真实姓名</strong></td>
+                <td><strong>身份证号码</strong></td>
+                <td><strong>总资产</strong></td>
+                <td><strong>累计收益</strong></td>
+                <td><strong>注册时间</strong></td>
+                <td><strong>状态</strong></td>
+                <td><strong>操作</strong></td>
+            </tr>
+            <tr ng-repeat="x in vm.list">
+                <td>{{$index+1}}</td>
+                <td>{{x.phoneNum}}</td>
+                <td>{{x.actualName}}</td>
+                <td>{{x.cardID}}</td>
+                <td>{{x.totalAssets}}</td>
+                <td>{{x.cumulativeIncome}}</td>
+                <td>{{x.createAt}}</td>
+                <td>{{x.state | statusFilter}}</td>
+                <td>
+                    <button class="btn btn-default"  ng-click = "vm.frozen(x.id,x.state)">{{x.state | status}}</button>
+                    <button class="btn btn-info" ui-sref ="backStage.userDetailed({id:x.id})" >查看</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="user-list-footer col-xs-12">
+        <div class="btn-list-size ">
+            <span>每页显示</span>
+            <input type="text" class="form-control  small" ng-model="vm.size" ng-init="vm.size = 10 ">
+            <span>条</span>
+        </div>
+        <ul    class="apage "
+               uib-pagination
+               total-items="vm.totalItems"
+               ng-model="vm.page"
+               max-size="5"
+               items-per-page = "vm.size"
+               first-text="第一页"
+               previous-text = "<"
+               next-text = ">"
+               ng-click="vm.search()"
+               rotate = "true"
+               force-ellipses = "true"
+               last-text="最后页"
+               boundary-links="true"
+               boundary-link-numbers="true">
+        </ul>
+        <div class="btn-list-page">
+            <span>去第</span>
+            <input type="text" class="form-control small" ng-model="vm.newPage">
+            <span>页</span>
+            <button class="btn btn-default" ng-click="vm.search()" >确定</button>
+        </div>
+    </div>
+</div>

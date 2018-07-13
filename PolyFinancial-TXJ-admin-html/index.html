@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    <!-- 什么鬼 -->
+    <!-- 测试测试测试 -->
+    <!-- 什么时候改的啊 -->
+    <!-- 覆盖掉一铭大佬的 -->
+
+    <title>聚金融</title>
     <!-- SEO页面关键词 -->
     <meta name="keywords" content="">
     <!-- SEO页面描述 -->
@@ -12,6 +18,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="vendor/minifresh/minirefresh.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/modules/login.css">
+    <link rel="stylesheet" href="css/modules/baskStage.css">
+    <link rel="stylesheet" href="css/modules/user.css">
+    <link rel="stylesheet" href="css/modules/userDetailed.css">
+    <link rel="stylesheet" href="css/modules/userTrade.css">
+    <link rel="stylesheet" href="css/modules/contractDetailed.css">
+    <link rel="stylesheet" href="css/modules/matching.css">
+
 
 
 
@@ -21,25 +36,60 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!--jq-->
+
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 <!--bootstrap脚本-->
+
 <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular.js"></script>
 <!--angular框架-->
-<script src="https://cdn.bootcss.com/angular-ui-router/1.0.17/angular-ui-router.js"></script>
+<!-- <script src="https://cdn.bootcss.com/angular-ui-router/1.0.17/angular-ui-router.js"></script> -->
+
 <!--ui-router路由-->
-<script src="http://cdn.bootcss.com/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js"></script>
+<script src="https://cdn.bootcss.com/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
 <!--ui-bootstrap插件-->
+<script src="http://cdn.bootcss.com/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.js"></script>
+
+<!-- 懒加载插件 -->
+<script src="https://cdn.bootcss.com/oclazyload/1.1.0/ocLazyLoad.min.js"></script>
+
+<!--bootbox插件-->
+<script src="https://cdn.bootcss.com/bootbox.js/4.4.0/bootbox.js"></script>
+
 <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular-animate.js"></script>
 <!--angular动画效果-->
+
 <script src="https://cdn.bootcss.com/angular-i18n/1.5.8/angular-locale_zh-cn.js"></script>
 <!--日历汉化-->
+
 <script src="vendor/minifresh/minirefresh.min.js"></script>
 <!--下拉刷新插件-->
 
 <!--<script src="node-modules/mock.js"></script>-->
 <!--自动生成假数据，可以拦截ajax请求，用于前端测试-->
 
+<script src="js/config.js"></script>
 
+<!--路由-->
+<script src="js/route.js"></script>
+
+<!--抽取的服务还有请求的url地址-->
+<script src="js/services/serviceHTTP.js"></script>
+<script src="js/services/serviceURL.js"></script>
+
+<script src="js/ctrl/loginCtrl.js"></script>
+<script src="js/ctrl/backStageCtrl.js"></script>
+
+<script src="js/ctrl/business/userCtrl.js"></script>
+<script src="js/ctrl/business/userDetailed.js"></script>
+<script src="js/ctrl/business/userContract.js"></script>
+<script src="js/ctrl/business/userContractDetailed.js"></script>
+<script src="js/ctrl/business/userTradeCtrl.js"></script>
+<script src="js/ctrl/business/debt.js"></script>
+<script src="js/ctrl/business/matching.js"></script>
+
+<!--过滤器-->
+<script src="js/filters/userFillter.js"></script>
 </body>
 </html>
 

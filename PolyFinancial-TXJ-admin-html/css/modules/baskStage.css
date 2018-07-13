@@ -1,0 +1,68 @@
+.backStage-side-nav-title {
+  padding-left: .2rem;
+  margin: 0;
+  height: .7rem;
+  line-height: .7rem;
+  width: 100%;
+  color: #29b078;
+  font-weight: bolder;
+  font-size: .3rem; }
+
+.backStage-title-right {
+  padding-right: .2rem;
+  height: .7rem;
+  line-height: .7rem;
+  font-size: .16rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fff; }
+  .backStage-title-right span {
+    padding: 0 .2rem;
+    transition: all 200ms ease; }
+  .backStage-title-right span:hover {
+    font-size: .25rem;
+    background-color: #29b078;
+    border-radius: .05rem; }
+
+.backStage-sign-out {
+  height: .7rem;
+  line-height: .7rem; }
+
+.backStage-view {
+  padding: .2rem; }
+
+.backStage-side-nav div {
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  font-size: .2rem; }
+  .backStage-side-nav div span {
+    text-align: center;
+    line-height: .6rem; }
+
+.backStage-side-nav-menu {
+  padding: .2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #29b078; }
+
+.backStage-nav-list {
+  background-color: khaki;
+  font-size: .2rem;
+  font-weight: bold; }
+  .backStage-nav-list a {
+    display: block;
+    height: 100%;
+    text-decoration: none; }
+    .backStage-nav-list a span {
+      color: black; }
+
+.backStage-nav-list:hover {
+  background-color: lightgreen; }
+
+.backStage-active {
+  background-color: lightgreen; }
+
+/*# sourceMappingURL=baskStage.css.map */

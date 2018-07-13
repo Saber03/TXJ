@@ -1,0 +1,42 @@
+.userDetailed {
+  border: #29b078 2px solid; }
+  .userDetailed h4 {
+    margin: .2rem 0;
+    padding-left: .4rem; }
+  .userDetailed div {
+    margin-top: .2rem;
+    padding-left: .6rem;
+    vertical-align: middle; }
+    .userDetailed div button {
+      height: .4rem;
+      background-color: #29b078;
+      color: white;
+      font-weight: bold; }
+
+.userDetailed-title {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: #29b078 2px solid;
+  height: .4rem; }
+  .userDetailed-title h3 {
+    margin: 0;
+    margin-left: -.3rem;
+    vertical-align: top; }
+  .userDetailed-title button {
+    height: .4rem;
+    margin-top: -.1rem;
+    margin-right: .4rem;
+    background-color: #29b078;
+    color: white;
+    font-weight: bold; }
+
+.userDetailed-btn {
+  padding: .2rem .6rem;
+  display: flex;
+  justify-content: center; }
+  .userDetailed-btn button {
+    margin: 0 .2rem; }
+
+/*# sourceMappingURL=userDetailed.css.map */

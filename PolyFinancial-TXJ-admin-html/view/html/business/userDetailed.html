@@ -1,0 +1,30 @@
+<div class="userDetailed">
+    <div class="userDetailed-title">
+        <h3 >用户详情</h3>
+        <button class="btn btn-default" ui-sref ="backStage.user">返回</button>
+    </div>
+
+    <h4>个人信息</h4>
+    <div>
+        <div>ID:{{vm.list.id}}</div>
+        <div>
+            手机号：{{vm.list.phoneNum}}
+            <button class="btn btn-default" ng-click = "vm.changePhone">更换</button>
+        </div>
+
+        <div>银行卡1：{{vm.card1}}</div>
+        <div>银行卡2：{{vm.card2}}</div>
+        <div>真实姓名：{{vm.list.actualName}}</div>
+        <div>身份证号码：{{vm.list.cardID}}</div>
+        <div>注册时间：{{vm.list.createAt}}</div>
+    </div>
+    <h4>资产信息</h4>
+    <div>
+        <div>总资产：{{vm.list.totalAssets}}</div>
+        <div>累计收益：{{vm.list.cumulativeIncome}}</div>
+    </div>
+    <div class="userDetailed-btn">
+        <button class="btn btn-default" ui-sref ="backStage.userTrade({id:vm.list.id})" >交易记录</button>
+        <button class="btn btn-default " ui-sref ="backStage.userContract({id:vm.list.id})" >投资合同</button>
+    </div>
+</div>

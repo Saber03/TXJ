@@ -1,0 +1,26 @@
+html{
+  font-size: 100px;
+}
+body{
+  font-size: 15px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none!important;
+}
+*:hover{
+  text-decoration: none;
+}
+.glyphicon{
+  top: 0;
+}
+
+.row{
+  width: 100%!important;
+  margin: 0!important;
+}
+.col-md-3,.col-md-4，.col-md-9,.col-md-8,.col-xs-12{
+  padding: 0 !important;
+}

@@ -1,0 +1,102 @@
+.matching {
+  padding: .2rem;
+  position: relative;
+  margin: 0; }
+  .matching .detail {
+    position: absolute;
+    top: .4rem;
+    left: .5rem;
+    border: 1px solid #0f0f0f;
+    border-radius: .1rem;
+    background-color: #999;
+    color: red; }
+  .matching .recommend {
+    display: flex;
+    flex-wrap: wrap; }
+    .matching .recommend div {
+      margin: .1rem;
+      padding: 0 .05rem;
+      border: 1px #0f0f0f solid;
+      border-radius: .1rem; }
+    .matching .recommend div:hover {
+      background-color: #2aabd2; }
+  .matching .select {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid;
+    width: 5rem;
+    padding: .2rem; }
+    .matching .select div {
+      flex-basis: 30%;
+      margin: .1rem 0; }
+      .matching .select div span {
+        border: #0f0f0f 1px solid;
+        padding: .05rem;
+        border-radius: .1rem;
+        background-color: #2aabd2; }
+  .matching .all {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(119, 119, 119, 0.5);
+    padding: .2rem; }
+    .matching .all .all-content {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f9f9f9;
+      border-radius: .1rem;
+      height: 80vh;
+      width: 80vw; }
+      .matching .all .all-content .title {
+        background-color: #777777;
+        border-bottom: 2px solid #0f0f0f;
+        padding: .1rem;
+        font-size: .2rem;
+        font-weight: bolder; }
+      .matching .all .all-content .content {
+        padding: .1rem;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto; }
+        .matching .all .all-content .content div {
+          flex-basis: 45%;
+          border-radius: .1rem;
+          border: 1px solid #0f0f0f;
+          margin: .1rem;
+          padding-left: .1rem; }
+        .matching .all .all-content .content div:hover {
+          background-color: #2aabd2; }
+      .matching .all .all-content .yahaha {
+        display: flex;
+        justify-content: center; }
+
+.active-1 {
+  background-color: #2aabd2; }
+
+.matching-all {
+  border: #29b078 2px solid; }
+
+.matching-title {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: #29b078 2px solid;
+  height: .6rem; }
+  .matching-title h3 {
+    margin: 0 .2rem;
+    height: .6rem;
+    line-height: .6rem; }
+  .matching-title button {
+    height: .4rem;
+    margin-top: .1rem;
+    margin-right: .4rem;
+    background-color: #29b078;
+    color: white;
+    font-weight: bold; }
+
+/*# sourceMappingURL=matching.css.map */

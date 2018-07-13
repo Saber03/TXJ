@@ -1,0 +1,31 @@
+.user form div {
+  height: .6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .user form div span {
+    flex-shrink: 0; }
+  .user form div input {
+    flex-shrink: 1;
+    width: 1.2rem; }
+
+.user-list-table tr td {
+  text-align: center;
+  vertical-align: middle; }
+
+.user-list-footer {
+  display: flex;
+  justify-content: space-between; }
+  .user-list-footer div {
+    display: flex;
+    align-items: center; }
+    .user-list-footer div input {
+      width: .45rem;
+      height: .3rem; }
+    .user-list-footer div button {
+      width: .5rem;
+      height: .3rem; }
+    .user-list-footer div span {
+      text-align: center; }
+
+/*# sourceMappingURL=user.css.map */

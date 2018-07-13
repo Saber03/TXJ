@@ -1,0 +1,24 @@
+.userTrade{
+  border: #29b078 2px solid;
+}
+.userTrade-title{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: #29b078 2px solid;
+  height: .6rem;
+  h3{
+    margin: 0 .2rem;
+    height: .6rem;
+    line-height: .6rem;
+  }
+  button{
+    height: .4rem;
+    margin-top: .1rem;
+    margin-right: .4rem;
+    background-color: #29b078;
+    color: white;
+    font-weight: bold;
+  }
+}

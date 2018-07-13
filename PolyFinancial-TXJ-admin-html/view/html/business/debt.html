@@ -1,0 +1,104 @@
+<div class="row user">
+    <form>
+        <div class="col-xs-4">
+            <span>债务ID：</span><input class="form-control" type="text" ng-model ="vm.debtId">
+        </div>
+        <div class="col-xs-4">
+            <span>企业名称：</span><input class="form-control" type="text" ng-model ="vm.companyName">
+        </div>
+        <div class="col-xs-4">
+            <span></span>
+            <button class="btn btn-danger" ng-click = "vm.reset()">重置</button>
+            <span></span>
+        </div>
+        <div class="col-xs-4">
+            <span>债务人：</span><input class="form-control" type="text" ng-model = "vm.obligor" >
+        </div>
+        <div class="col-xs-4">
+            <span>状态：</span>
+            <select class="form-control" ng-model = "vm.status" >
+                <option value="0">已匹配</option>
+                <option value="1">匹配中</option>
+                <option value="2">未匹配</option>
+            </select>
+        </div>
+        <div class="col-xs-4">
+            <span></span>
+            <button class="btn btn-success" ng-click = "vm.debtSearch()">搜索</button>
+            <span></span>
+        </div>
+    </form>
+
+    <h2 class="col-xs-12">债权列表</h2>
+    <div class="table-responsive col-xs-12">
+        <table id="tb" class="table table-striped table-hover table-responsive table-condensed table-bordered user-list-table">
+            <tr>
+                <td><strong>序号</strong></td>
+                <td><strong>企业名称</strong></td>
+                <td><strong>债务人（企业法人）</strong></td>
+                <td><strong>手机号</strong></td>
+                <td><strong>身份证号码</strong></td>
+                <td><strong>借款金额</strong></td>
+                <td><strong>借款期限</strong></td>
+                <td><strong>借款日期</strong></td>
+                <td><strong>还款日期</strong></td>
+                <td><strong>投资合同ID</strong></td>
+                <td><strong>投资金额</strong></td>
+                <td><strong>理财期限</strong></td>
+                <td><strong>待匹配金额</strong></td>
+                <td><strong>状态</strong></td>
+                <td><strong>操作</strong></td>
+            </tr>
+            <tr ng-repeat="x in vm.list">
+                <td>{{$index+1}}</td>
+                <td>{{x.enterpriseName}}</td>
+                <td>{{x.creditor}}</td>
+                <td>{{x.phoneNum}}</td>
+                <td>{{x.cardID}}</td>
+                <td>{{x.loanAmount}}</td>
+                <td>{{x.loanPeriod}}</td>
+                <td>{{x.loanAt}}</td>
+                <td>{{x.repaymentAt}}</td>
+                <td>{{x.contractId}}</td>
+                <td>{{x.investment}}</td>
+                <td>{{x.productTerm}}</td>
+                <td>{{x.sruplusAmount}}</td>
+                <td>{{x.state | debtState}}</td>
+                <td>
+                    <button class="btn btn-default"  ui-sref ="backStage.matching({id:x.id})">匹配</button>
+                    <button class="btn btn-info" ui-sref ="backStage.debtEdit({id:x.id})">编辑</button>
+                    <button class="btn btn-default"  ng-click = "vm.delete(x.id,x.state)">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="user-list-footer col-xs-12">
+        <div class="btn-list-size ">
+            <span>每页显示</span>
+            <input type="text" class="form-control  small" ng-model="vm.size" ng-init="vm.size = 10 ">
+            <span>条</span>
+        </div>
+        <ul    class="apage "
+               uib-pagination
+               total-items="vm.totalItems"
+               ng-model="vm.page"
+               max-size="5"
+               items-per-page = "vm.size"
+               first-text="第一页"
+               previous-text = "<"
+               next-text = ">"
+               ng-click="vm.search()"
+               rotate = "true"
+               force-ellipses = "true"
+               last-text="最后页"
+               boundary-links="true"
+               boundary-link-numbers="true">
+        </ul>
+        <div class="btn-list-page">
+            <span>去第</span>
+            <input type="text" class="form-control small" ng-model="vm.newPage">
+            <span>页</span>
+            <button class="btn btn-default" ng-click="vm.search()" >确定</button>
+        </div>
+    </div>
+</div>

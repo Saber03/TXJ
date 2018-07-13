@@ -1,0 +1,55 @@
+<div class="matching-all">
+    <div class="matching-title">
+        <h3 >债权匹配</h3>
+        <button class="btn btn-default" ui-sref ="backStage.debt">返回</button>
+    </div>
+    <div class="matching">
+        <div>匹配债权</div>
+        <div><span>yahahasimida</span></div>
+        <div>推荐投资</div>
+        <div class="detail" ng-show = "vm.detail">
+            投资合同：{{vm.data2.id}} 投资金额：{{vm.data2.money}}
+        </div>
+        <div class="recommend">
+            <div ng-repeat = "x in vm.dataThree"
+                 ng-mouseover = "vm.over(x)"
+                 ng-mouseleave = "vm.leave()"
+                 ng-class="{true:'active-1',false : 'none'}[vm.selected.indexOf(x) >= 0]"
+                 ng-click = "vm.select(x)"
+            >{{x.id}}</div>
+            <div ng-click = "vm.allOpen()" >查看全部</div>
+        </div>
+        <div>匹配债权</div>
+        <div class="select">
+            <div ng-repeat = "x in vm.selected" >
+            <span class="selected"
+                  ng-click = "vm.remove(x)"
+            >{{x.id}}</span>
+
+            </div>
+        </div>
+        <div class="all" ng-show = "vm.all" >
+            <div class="all-content" >
+                <div class="title">所有投资</div>
+
+                <div class="content">
+                    <div ng-repeat = "x in vm.data"
+                         ng-class="{true:'active-1',false : 'none'}[vm.selected.indexOf(x) >= 0]"
+                         ng-click = "vm.select(x)">
+                        <span>投资合同： {{x.id}}</span>
+                        <span>投资金额： {{x.money}}</span>
+                    </div>
+                </div>
+                <div class="yahaha">
+                    <button class="btn btn-default" ng-click ="vm.close()">确定</button>
+                </div>
+            </div>
+
+        </div>
+        <div style="margin-top: .2rem">
+            <span>待匹配金额:</span><span>60000元</span>
+        </div>
+
+    </div>
+
+</div>

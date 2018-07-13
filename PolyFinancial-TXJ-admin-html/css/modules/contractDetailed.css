@@ -1,0 +1,16 @@
+.contractDetailed {
+  border: #29b078 2px solid; }
+
+.contractContent {
+  padding: .2rem; }
+  .contractContent div {
+    margin-bottom: .1rem; }
+
+.contractContent-bottom {
+  display: flex;
+  justify-content: space-between; }
+  .contractContent-bottom div img {
+    width: 2rem;
+    height: 2rem; }
+
+/*# sourceMappingURL=contractDetailed.css.map */

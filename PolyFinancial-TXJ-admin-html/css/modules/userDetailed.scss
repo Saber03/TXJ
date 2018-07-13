@@ -1,0 +1,56 @@
+.userDetailed{
+  border: #29b078 2px solid;
+
+  h4{
+    margin: .2rem 0;
+    padding-left: .4rem;
+  }
+  div{
+    margin-top: .2rem;
+    padding-left: .6rem;
+    vertical-align:middle;
+
+
+    button{
+      height: .4rem;
+      background-color: #29b078;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+//用户详情上方标题样式
+.userDetailed-title{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  border-bottom: #29b078 2px solid;
+  height: .4rem;
+  h3{
+    margin: 0;
+    margin-left: -.3rem;
+    vertical-align: top;
+  }
+  button{
+    height: .4rem;
+    margin-top: -.1rem;
+    margin-right: .4rem;
+    background-color: #29b078;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+//用户详情页面下方按钮样式
+.userDetailed-btn{
+  padding: .2rem .6rem;
+  display: flex;
+  justify-content: center;
+  button{
+    margin: 0 .2rem;
+  }
+
+
+}

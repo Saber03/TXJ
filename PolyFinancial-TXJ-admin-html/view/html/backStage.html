@@ -1,10 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="row backStage">
+    <div class="col-xs-12 col-md-4 ">
+        <div class="backStage-side-nav-title">聚金融后台管理系统</div>
+    </div>
+    <div class="col-xs-12 col-md-8">
+        <div class=" backStage-title-right">
+            <span class="backStage-sign-out glyphicon glyphicon-off" ng-click="vm.exit()"></span>
+            <span class="user-name">admin</span>
+        </div>
+    </div>
+    <div class="col-md-3 col-xs-12"  >
+        <div ng-repeat="x in vm.sideBar" class="backStage-side-nav">
+            <div  class="backStage-side-nav-menu" ng-click="vm.titleIndex($index)" >
+                <span class="glyphicon glyphicon-list"></span>
+                <span>{{x.sideBarTitle}}</span>
+                <span ng-class="{true:'glyphicon glyphicon-arrow-down',false : 'glyphicon glyphicon-arrow-left'}[vm.sideBarTitleIndex == $index]"></span>
+            </div>
+            <div ng-repeat="y in x.sideBarContent"
+                 ng-show="vm.sideBarTitleIndex == $parent.$index"
+                 ng-click="vm.content(y.name,$parent.$index)"
+                 ng-class="{true:'backStage-active',false:''}[y.name == vm.sideBarContent]"
+                 class="backStage-nav-list">
+                <a  ui-sref = {{y.url}}>
+                    <span>{{y.name}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 col-xs-12" >
+        <div ui-view class="backStage-view">
+            <h1>
+                Welcome!
+            </h1>
+        </div>
+    </div>
+</div>

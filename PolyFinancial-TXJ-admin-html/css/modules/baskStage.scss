@@ -1,0 +1,96 @@
+.backStage{
+}
+
+//左边标题的样式
+.backStage-side-nav-title{
+  padding-left: .2rem;
+  margin: 0;
+  height: .7rem;
+  line-height: .7rem;
+  width: 100%;
+  color: #29b078;
+  font-weight: bolder;
+  font-size: .3rem;
+}
+
+//右边登陆用户名模块样式
+.backStage-title-right{
+  padding-right: .2rem;
+  height: .7rem;
+  line-height: .7rem;
+  font-size: .16rem;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #fff;
+  span{
+    padding: 0 .2rem;
+    transition:all 200ms ease ;
+
+  }
+  span:hover{
+    font-size: .25rem;
+    background-color: #29b078;
+    border-radius: .05rem;
+  }
+}
+.backStage-sign-out{
+
+  height: .7rem;
+  line-height: .7rem;
+}
+
+//镶套路由样式
+.backStage-view{
+  padding: .2rem;
+}
+
+//侧边栏样式
+.backStage-side-nav{
+  div{
+    height: .6rem;
+    line-height: .6rem;
+    text-align: center;
+    font-size: .2rem;
+    span{
+      text-align: center;
+      line-height: .6rem;
+    }
+  }
+}
+
+//左边侧边栏样式
+.backStage-side-nav-menu{
+  padding: .2rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #29b078;
+
+}
+
+.backStage-nav-list{
+  background-color: khaki;
+  font-size: .2rem;
+  font-weight: bold;
+  //transition: 200ms ease background-color;
+  a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+
+    span{
+      color: black;
+      //background-color: khaki;
+    }
+  }
+}
+.backStage-nav-list:hover{
+  background-color: lightgreen;
+
+}
+
+//侧边栏被激活时样式
+.backStage-active{
+  background-color: lightgreen;
+}
